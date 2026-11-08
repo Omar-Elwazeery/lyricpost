@@ -1,0 +1,1 @@
+Uses LyricPost's own Last.fm API key.

@@ -13,7 +13,8 @@ class DataFetcher {
     async getSongInfos(name, limit = 1) {
         const query = name;
 
-        const apiKey = 'b362b9a7f5f0c5a7f749d568b68bc32a';
+        // Last.fm API key registered for LyricPost for Android (only public read methods are used).
+        const apiKey = '7bb2f2576460f59676fbfd2333d97440';
         const searchUrl = `https://ws.audioscrobbler.com/2.0/?method=track.search&track=${encodeURIComponent(query)}&api_key=${apiKey}&format=json&limit=${limit}`;
 
         const response = await fetch(searchUrl);
@@ -26,7 +27,7 @@ class DataFetcher {
                 const infoUrl = `https://ws.audioscrobbler.com/2.0/?method=track.getInfo&api_key=${apiKey}&artist=${encodeURIComponent(searchTrack.artist)}&track=${encodeURIComponent(searchTrack.name)}&format=json`;
                 const infoResponse = await fetch(infoUrl, {
                     headers: {
-                        'User-Agent': 'Application LyricPost/1.0 (pogromca.ap@gmail.com)',
+                        'User-Agent': 'LyricPost-Android/1.0.1 (+https://github.com/Omar-Elwazeery/lyricpost)',
                     },
                 });
                 const infoResult = await infoResponse.json();
