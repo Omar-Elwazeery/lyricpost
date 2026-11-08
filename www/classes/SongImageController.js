@@ -1096,10 +1096,14 @@ class SongImageController {
             canvas = this.addBgToDownloadCanvas(canvas);
         }
 
-        canvas.toBlob((blob) => {
-            window.saveAs(blob, downloadName);
+        try {
+            await exportImage(canvas, downloadName);
+        } catch (err) {
+            console.error('Failed to export image', err);
+            alert('Could not save the image: ' + (err?.message ?? err));
+        } finally {
             this.appShell.hideSearching();
-        });
+        }
     }
 
     /**

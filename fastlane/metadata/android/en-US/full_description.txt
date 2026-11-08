@@ -1,0 +1,12 @@
+<p>LyricPost turns your favourite lines from a song into a stylish lyrics card you can save or share in seconds.</p>
+<ul>
+<li>Search any song and pick it from the results with its album cover</li>
+<li>Lyrics are loaded automatically from LRCLIB, the free and open lyrics database, or type your own</li>
+<li>Select the lines you want and style the card: colours, blur, fonts, spacing, corner radius and layout presets</li>
+<li>Save the image to your Gallery in high resolution</li>
+<li>Share it straight to Instagram (Feed, Stories, Chats), WhatsApp, Telegram, X, Snapchat and any other installed app</li>
+<li>Light and dark theme</li>
+</ul>
+<p>No account, no ads, no tracking.</p>
+<p>Song search uses the Last.fm API, lyrics come from LRCLIB and album covers from the Cover Art Archive, so an internet connection is needed to find songs.</p>
+<p>Based on the LyricPost web app by Adam Palinkiewicz (MIT licence).</p>

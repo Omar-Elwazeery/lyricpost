@@ -3,16 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <script src="vendor/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="vendor/fonts/material-symbols-outlined.css" />
+    <link rel="stylesheet" href="vendor/fonts/poppins.css" />
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/wizard.css">
     <link rel="stylesheet" href="styles/song-image.css">
+    <link rel="stylesheet" href="styles/export-sheet.css">
     <link rel="icon" type="image/x-icon" href="icons/favicon.ico" />
-    <link rel="manifest" href="manifest.json" />
+    
     <link rel="apple-touch-icon" href="icons/icon-192.png" />
     <meta name="theme-color" content="#f6f6f6" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#101018" media="(prefers-color-scheme: dark)" />
@@ -298,12 +298,6 @@
         </section>
     </main>
     <footer class="surface">
-        <div>
-            Made by
-            <a href="https://github.com/palinkiewicz" target="_blank">palinkiewicz</a>
-            |
-            <a href="https://ko-fi.com/palinkiewicz">Ko-Fi</a>
-        </div>
         <div id="dark-mode-toggle">
             <span class="material-symbols-outlined"></span>
         </div>
@@ -321,6 +315,7 @@
     <script src="classes/LyricsController.js"></script>
     <script src="classes/SearchController.js"></script>
     <script src="classes/NavigationController.js"></script>
+    <script src="classes/NativeExport.js"></script>
     <script src="index.js"></script>
 </body>
 

@@ -1,0 +1,39 @@
+# Draft build recipe for F-Droid (https://gitlab.com/fdroid/fdroiddata).
+# Submit it as metadata/io.github.omar_elwazeery.lyricpost.yml in a merge
+# request to fdroiddata; their CI runs the real build and will report problems.
+Categories:
+  - Graphics
+  - Multimedia
+License: MIT
+AuthorName: Omar Elwazeery
+SourceCode: https://github.com/Omar-Elwazeery/lyricpost
+IssueTracker: https://github.com/Omar-Elwazeery/lyricpost/issues
+
+AntiFeatures:
+  NonFreeNet:
+    en-US: Song search uses the Last.fm API, a proprietary service.
+
+AutoName: LyricPost
+
+RepoType: git
+Repo: https://github.com/Omar-Elwazeery/lyricpost.git
+
+Builds:
+  - versionName: 1.0.0
+    versionCode: 1
+    commit: v1.0.0
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y nodejs npm openjdk-21-jdk-headless
+    init: cd ../.. && npm ci --omit=dev --ignore-scripts
+    gradle:
+      - yes
+    prebuild: cd ../.. && npm run prepare:android
+    scandelete:
+      - node_modules
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.0.0
+CurrentVersionCode: 1

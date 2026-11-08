@@ -69,8 +69,13 @@ class SearchController {
         } catch (error) {
             console.error(error);
 
+            const offline =
+                !navigator.onLine || /failed to fetch/i.test(error?.message);
+
             this.appShell.throwError(
-                `Oops! Looks like we couldn't find any songs for \"${name}\".`
+                offline
+                    ? "You're offline. Connect to the internet to search for songs."
+                    : `Oops! Looks like we couldn't find any songs for \"${name}\".`
             );
         }
 

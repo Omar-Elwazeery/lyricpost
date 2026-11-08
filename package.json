@@ -1,0 +1,31 @@
+{
+  "name": "lyricpost",
+  "version": "1.0.0",
+  "description": "LyricPost: lyrics image generator for Android",
+  "scripts": {
+    "vendor": "node scripts/vendor.mjs",
+    "sync": "npm run vendor && cap sync android",
+    "build:apk": "npm run sync && cd android && ./gradlew assembleDebug",
+    "icon": "node scripts/icon.mjs",
+    "prepare:android": "node scripts/vendor.mjs && node scripts/copy-web.mjs"
+  },
+  "author": "Omar Elwazeery",
+  "license": "MIT",
+  "dependencies": {
+    "@capacitor/android": "^8.6.0",
+    "@capacitor/cli": "^8.6.0",
+    "@capacitor/core": "^8.6.0",
+    "@capacitor/filesystem": "^8.1.5",
+    "@capacitor/share": "^8.0.3",
+    "@fontsource/poppins": "^5.3.0",
+    "html2canvas": "^1.4.1",
+    "material-symbols": "^0.48.3"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Omar-Elwazeery/lyricpost.git"
+  }
+}

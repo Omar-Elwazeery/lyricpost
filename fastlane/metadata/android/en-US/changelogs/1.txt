@@ -1,0 +1,1 @@
+First Android release: native Save to Gallery, direct sharing to installed apps, bundled fonts, new icon.

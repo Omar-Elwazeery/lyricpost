@@ -1,3 +1,10 @@
 temp/
 CLAUDE.md
 .claude/
+
+# Node / generated
+node_modules/
+www/vendor/
+www/LICENSE.txt
+assets/icon-preview.png
+*.apk
